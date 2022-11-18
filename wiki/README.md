@@ -1,1 +1,5 @@
+# Wiki
 
+Django project called wiki that contains a single app called encyclopedia. encyclopedia/urls.py, where the URL configuration for this app is defined.
+In encyclopedia/util.py, list_entries returns a list of the names of all encyclopedia entries currently saved. save_entry will save a new encyclopedia entry, given its title and some Markdown content. get_entry will retrieve an encyclopedia entry by its title, returning its Markdown contents if the entry exists or None.
+Each encyclopedia entry will be saved as a Markdown file inside of the entries/ directory. encyclopedia/templates/encyclopedia/index.html is the template that inherits from a base layout.html file and specifies what the page’s title should be, and what should be in the body of the page: in this case, an unordered list of all of the entries in the encyclopedia. layout.html, meanwhile, defines the broader structure of the page: each page has a sidebar with a search field (that for now does nothing), a link to go home, and links (that don’t yet work) to create a new page or visit a random page.
